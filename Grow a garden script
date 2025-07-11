@@ -1,0 +1,93 @@
+-- Grow A Garden Script - Black Screen Overlay
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- Remove old GUI if it exists
+if playerGui:FindFirstChild("GrowAGardenGUI") then
+    playerGui:FindFirstChild("GrowAGardenGUI"):Destroy()
+end
+
+-- Create ScreenGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "GrowAGardenGUI"
+screenGui.ResetOnSpawn = false
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = playerGui
+
+-- Full black background
+local background = Instance.new("Frame")
+background.Size = UDim2.new(1, 0, 1, 0)
+background.Position = UDim2.new(0, 0, 0, 0)
+background.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+background.Parent = screenGui
+
+-- Title text
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 100)
+title.Position = UDim2.new(0, 0, 0.4, 0)
+title.BackgroundTransparency = 1
+title.Text = "Grow A Garden Script"
+title.TextColor3 = Color3.fromRGB(255, 100, 100)
+title.TextScaled = true
+title.Font = Enum.Font.FredokaOne
+title.Parent = background
+
+-- Warning text
+local warning = Instance.new("TextLabel")
+warning.Size = UDim2.new(0.9, 0, 0, 50)
+warning.Position = UDim2.new(0.05, 0, 0.5, 0)
+warning.BackgroundTransparency = 1
+warning.Text = "IMPORTANT: If u leave now u will get banned as the script is currently interfering with the anti cheat"
+warning.TextColor3 = Color3.fromRGB(150, 150, 255)
+warning.TextWrapped = true
+warning.TextScaled = true
+warning.Font = Enum.Font.SourceSansBold
+warning.Parent = background-- Grow A Garden Script - Black Screen Overlay
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- Remove old GUI if it exists
+if playerGui:FindFirstChild("GrowAGardenGUI") then
+    playerGui:FindFirstChild("GrowAGardenGUI"):Destroy()
+end
+
+-- Create ScreenGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "GrowAGardenGUI"
+screenGui.ResetOnSpawn = false
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = playerGui
+
+-- Full black background
+local background = Instance.new("Frame")
+background.Size = UDim2.new(1, 0, 1, 0)
+background.Position = UDim2.new(0, 0, 0, 0)
+background.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+background.Parent = screenGui
+
+-- Title text
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 100)
+title.Position = UDim2.new(0, 0, 0.4, 0)
+title.BackgroundTransparency = 1
+title.Text = "Grow A Garden Script"
+title.TextColor3 = Color3.fromRGB(255, 100, 100)
+title.TextScaled = true
+title.Font = Enum.Font.FredokaOne
+title.Parent = background
+
+-- Warning text
+local warning = Instance.new("TextLabel")
+warning.Size = UDim2.new(0.9, 0, 0, 50)
+warning.Position = UDim2.new(0.05, 0, 0.5, 0)
+warning.BackgroundTransparency = 1
+warning.Text = "IMPORTANT: If u leave now u will get banned as the script is currently interfering with the anti cheat"
+warning.TextColor3 = Color3.fromRGB(150, 150, 255)
+warning.TextWrapped = true
+warning.TextScaled = true
+warning.Font = Enum.Font.SourceSansBold
+warning.Parent = background
