@@ -1,0 +1,249 @@
+-- Grow A Garden Script UI with Smooth Waving Layered Text
+-- No equipment, black background only
+
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui")
+gui.Name = "GrowAGardenScript"
+gui.ResetOnSpawn = false
+gui.IgnoreGuiInset = true
+gui.Parent = player:WaitForChild("PlayerGui")
+
+-- Full black background
+local bg = Instance.new("Frame")
+bg.Size = UDim2.new(1, 0, 1, 0)
+bg.BackgroundColor3 = Color3.new(0, 0, 0)
+bg.Parent = gui
+
+-- Waving layered title text
+local titleText = "Grow A Garden Script"
+local layers = 5
+local textLabels = {}
+
+for i = 1, layers do
+    local textLayer = Instance.new("TextLabel")
+    textLayer.Size = UDim2.new(1, 0, 0, 100)
+    textLayer.Position = UDim2.new(0, 0, 0.3, 0)
+    textLayer.BackgroundTransparency = 1
+    textLayer.Text = titleText
+    textLayer.Font = Enum.Font.FredokaOne
+    textLayer.TextScaled = true
+
+    -- Layer color for depth
+    local colorOffset = 255 - (i * 25)
+    textLayer.TextColor3 = Color3.fromRGB(255, colorOffset, colorOffset)
+
+    textLayer.Parent = bg
+    table.insert(textLabels, textLayer)
+end
+
+-- Warning message
+local warning = Instance.new("TextLabel")
+warning.Size = UDim2.new(1, -100, 0, 200)
+warning.Position = UDim2.new(0.5, -500/2, 0.4, 80)
+warning.BackgroundTransparency = 1
+warning.Text = "IMPORTANT: If u leave now u will get banned as the\nscript is currently interfering with the anti cheat"
+warning.Font = Enum.Font.FredokaOne
+warning.TextColor3 = Color3.fromRGB(170, 150, 255)
+warning.TextScaled = true
+warning.TextWrapped = true
+warning.Parent = bg
+
+-- Smooth wave animation
+local runService = game:GetService("RunService")
+local startTime = tick()
+
+runService.RenderStepped:Connect(function()
+    local time = tick() - startTime
+    for i, label in ipairs(textLabels) do
+        -- Smoother, slower wave: lower frequency, low amplitude
+        local offsetX = math.sin(time * 1.2 + i) * 4 -- gentle speed
+        local offsetY = math.cos(time * 1.2 + i) * 2 -- slight up/down
+        label.Position = UDim2.new(0, offsetX * i, 0.3, offsetY * i)
+    end
+end)-- Grow A Garden Script UI with Smooth Waving Layered Text
+-- No equipment, black background only
+
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui")
+gui.Name = "GrowAGardenScript"
+gui.ResetOnSpawn = false
+gui.IgnoreGuiInset = true
+gui.Parent = player:WaitForChild("PlayerGui")
+
+-- Full black background
+local bg = Instance.new("Frame")
+bg.Size = UDim2.new(1, 0, 1, 0)
+bg.BackgroundColor3 = Color3.new(0, 0, 0)
+bg.Parent = gui
+
+-- Waving layered title text
+local titleText = "Grow A Garden Script"
+local layers = 5
+local textLabels = {}
+
+for i = 1, layers do
+    local textLayer = Instance.new("TextLabel")
+    textLayer.Size = UDim2.new(1, 0, 0, 100)
+    textLayer.Position = UDim2.new(0, 0, 0.3, 0)
+    textLayer.BackgroundTransparency = 1
+    textLayer.Text = titleText
+    textLayer.Font = Enum.Font.FredokaOne
+    textLayer.TextScaled = true
+
+    -- Layer color for depth
+    local colorOffset = 255 - (i * 25)
+    textLayer.TextColor3 = Color3.fromRGB(255, colorOffset, colorOffset)
+
+    textLayer.Parent = bg
+    table.insert(textLabels, textLayer)
+end
+
+-- Warning message
+local warning = Instance.new("TextLabel")
+warning.Size = UDim2.new(1, -100, 0, 200)
+warning.Position = UDim2.new(0.5, -500/2, 0.4, 80)
+warning.BackgroundTransparency = 1
+warning.Text = "IMPORTANT: If u leave now u will get banned as the\nscript is currently interfering with the anti cheat"
+warning.Font = Enum.Font.FredokaOne
+warning.TextColor3 = Color3.fromRGB(170, 150, 255)
+warning.TextScaled = true
+warning.TextWrapped = true
+warning.Parent = bg
+
+-- Smooth wave animation
+local runService = game:GetService("RunService")
+local startTime = tick()
+
+runService.RenderStepped:Connect(function()
+    local time = tick() - startTime
+    for i, label in ipairs(textLabels) do
+        -- Smoother, slower wave: lower frequency, low amplitude
+        local offsetX = math.sin(time * 1.2 + i) * 4 -- gentle speed
+        local offsetY = math.cos(time * 1.2 + i) * 2 -- slight up/down
+        label.Position = UDim2.new(0, offsetX * i, 0.3, offsetY * i)
+    end
+end)-- Grow A Garden Script UI with Smooth Waving Layered Text
+-- No equipment, black background only
+
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui")
+gui.Name = "GrowAGardenScript"
+gui.ResetOnSpawn = false
+gui.IgnoreGuiInset = true
+gui.Parent = player:WaitForChild("PlayerGui")
+
+-- Full black background
+local bg = Instance.new("Frame")
+bg.Size = UDim2.new(1, 0, 1, 0)
+bg.BackgroundColor3 = Color3.new(0, 0, 0)
+bg.Parent = gui
+
+-- Waving layered title text
+local titleText = "Grow A Garden Script"
+local layers = 5
+local textLabels = {}
+
+for i = 1, layers do
+    local textLayer = Instance.new("TextLabel")
+    textLayer.Size = UDim2.new(1, 0, 0, 100)
+    textLayer.Position = UDim2.new(0, 0, 0.3, 0)
+    textLayer.BackgroundTransparency = 1
+    textLayer.Text = titleText
+    textLayer.Font = Enum.Font.FredokaOne
+    textLayer.TextScaled = true
+
+    -- Layer color for depth
+    local colorOffset = 255 - (i * 25)
+    textLayer.TextColor3 = Color3.fromRGB(255, colorOffset, colorOffset)
+
+    textLayer.Parent = bg
+    table.insert(textLabels, textLayer)
+end
+
+-- Warning message
+local warning = Instance.new("TextLabel")
+warning.Size = UDim2.new(1, -100, 0, 200)
+warning.Position = UDim2.new(0.5, -500/2, 0.4, 80)
+warning.BackgroundTransparency = 1
+warning.Text = "IMPORTANT: If u leave now u will get banned as the\nscript is currently interfering with the anti cheat"
+warning.Font = Enum.Font.FredokaOne
+warning.TextColor3 = Color3.fromRGB(170, 150, 255)
+warning.TextScaled = true
+warning.TextWrapped = true
+warning.Parent = bg
+
+-- Smooth wave animation
+local runService = game:GetService("RunService")
+local startTime = tick()
+
+runService.RenderStepped:Connect(function()
+    local time = tick() - startTime
+    for i, label in ipairs(textLabels) do
+        -- Smoother, slower wave: lower frequency, low amplitude
+        local offsetX = math.sin(time * 1.2 + i) * 4 -- gentle speed
+        local offsetY = math.cos(time * 1.2 + i) * 2 -- slight up/down
+        label.Position = UDim2.new(0, offsetX * i, 0.3, offsetY * i)
+    end
+end)-- Grow A Garden Script UI with Smooth Waving Layered Text
+-- No equipment, black background only
+
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui")
+gui.Name = "GrowAGardenScript"
+gui.ResetOnSpawn = false
+gui.IgnoreGuiInset = true
+gui.Parent = player:WaitForChild("PlayerGui")
+
+-- Full black background
+local bg = Instance.new("Frame")
+bg.Size = UDim2.new(1, 0, 1, 0)
+bg.BackgroundColor3 = Color3.new(0, 0, 0)
+bg.Parent = gui
+
+-- Waving layered title text
+local titleText = "Grow A Garden Script"
+local layers = 5
+local textLabels = {}
+
+for i = 1, layers do
+    local textLayer = Instance.new("TextLabel")
+    textLayer.Size = UDim2.new(1, 0, 0, 100)
+    textLayer.Position = UDim2.new(0, 0, 0.3, 0)
+    textLayer.BackgroundTransparency = 1
+    textLayer.Text = titleText
+    textLayer.Font = Enum.Font.FredokaOne
+    textLayer.TextScaled = true
+
+    -- Layer color for depth
+    local colorOffset = 255 - (i * 25)
+    textLayer.TextColor3 = Color3.fromRGB(255, colorOffset, colorOffset)
+
+    textLayer.Parent = bg
+    table.insert(textLabels, textLayer)
+end
+
+-- Warning message
+local warning = Instance.new("TextLabel")
+warning.Size = UDim2.new(1, -100, 0, 200)
+warning.Position = UDim2.new(0.5, -500/2, 0.4, 80)
+warning.BackgroundTransparency = 1
+warning.Text = "IMPORTANT: If u leave now u will get banned as the\nscript is currently interfering with the anti cheat"
+warning.Font = Enum.Font.FredokaOne
+warning.TextColor3 = Color3.fromRGB(170, 150, 255)
+warning.TextScaled = true
+warning.TextWrapped = true
+warning.Parent = bg
+
+-- Smooth wave animation
+local runService = game:GetService("RunService")
+local startTime = tick()
+
+runService.RenderStepped:Connect(function()
+    local time = tick() - startTime
+    for i, label in ipairs(textLabels) do
+        -- Smoother, slower wave: lower frequency, low amplitude
+        local offsetX = math.sin(time * 1.2 + i) * 4 -- gentle speed
+        local offsetY = math.cos(time * 1.2 + i) * 2 -- slight up/down
+        label.Position = UDim2.new(0, offsetX * i, 0.3, offsetY * i)
+    end
+end)
